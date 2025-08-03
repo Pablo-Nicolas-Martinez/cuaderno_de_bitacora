@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<nav class="top_nav upcase">
+  <p><a href="{{ get_url(path="") | safe }}">Cuaderno de Bitácora</a></p>
+</nav>
+
+<main>
+  <div class="container libre-baskerville-regular">
+    <h1 class="title">
+      {{ page.title }}
+    </h1>
+    <p class="subtitle">Escrito: {{ page.date }}. Tiempo de lectura: {{ page.reading_time }} min</p>
+    {{ page.content | safe }}
+  </div>
+</main>
+
+<footer>
+  <div class="footer_container">
+    <div>
+      Copyright Pablo Nicolás 2025
+    </div>
+    <div>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+    </div>
+  </div>
+</footer>
+
+{% endblock content %}

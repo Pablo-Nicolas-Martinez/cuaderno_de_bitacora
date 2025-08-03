@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+  <div class="container libre-baskerville-regular">
+    <h1 class="title">
+      {{ section.title }}
+    </h1>
+    <ul class="blog_container">
+      <!-- If you are using pagination, section.pages will be empty.
+           You need to use the paginator object -->  
+      {% for page in section.pages %}
+      <li class="blog_item">
+        <p class="date">{{ page.date }}</p>
+        <a href="{{ page.permalink | safe }}" class="title">{{ page.title }}</a>
+        <p class="reading_time"> {{ page.reading_time }} min</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="footer_container">
+    <p>
+      Copyright Pablo Nicolás 2025
+    </p>
+    <p>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+    </p>
+  </div>
+</footer>
+
+{% endblock content %}
+
+<!--<li class="blog_item"><a href="{{ page.permalink | safe }}">{{ page.title }}, {{ page.date }}, {{ page.reading_time }} min</a></li>-->
