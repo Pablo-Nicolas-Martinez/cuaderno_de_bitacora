@@ -1,8 +1,53 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Now we can get to modifying everything
-</h1>
-<p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
+
+<main>
+  <div class="container libre-baskerville-regular">
+    <h1 class="title title_landing">
+      Cuaderno de Bitácora
+    </h1>
+    <p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
+    <!--<ul class="blog_container">
+      If you are using pagination, section.pages will be empty.
+           You need to use the paginator object
+      {% for page in section.pages %}
+      <li class="blog_item">
+        <p class="date">{{ page.date }}</p>
+        <a href="{{ page.permalink | safe }}" class="title">{{ page.title }}</a>
+        <p class="reading_time"> {{ page.reading_time }} min</p>
+      </li>
+      {% endfor %}
+    </ul>-->
+    <p class="sub_header">
+      Un cuaderno de bitácora, según Wikipedia, es un libro que nos relata la vida o la experiencia de alguna persona en especial y también sirve en el desarrollo de un viaje para escribir en ella.
+    </p>
+
+    <ul class="blog_container">
+      <!-- If you are using pagination, section.pages will be empty.
+           You need to use the paginator object -->  
+      {% for page in section.pages %}
+      <li class="blog_item">
+        <p class="date">{{ page.date }}</p>
+        <a href="{{ page.permalink | safe }}" class="title">{{ page.title }}</a>
+        <p class="reading_time"> {{ page.reading_time }} min</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+
+<!--
+<footer>
+  <div class="footer_container">
+    <p>
+      Copyright Pablo Nicolás 2025
+    </p>
+    <p>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+    </p>
+  </div>
+</footer>
+-->
+
 {% endblock content %}

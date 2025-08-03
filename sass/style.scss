@@ -163,9 +163,21 @@ footer {
 .main_button:active {
     background-color: #803418;
     transform: scale(.95);
-    animation-duration: .5s;
+    animation-duration: .05s;
     animation-name: push_button;
     transition: ease-in-out;
+}
+
+/* LANDING ELEMENTS AND GENERAL */
+
+.title_landing {
+    font-size: 30pt;
+    margin-top: 200px;
+}
+
+.sub_header {
+    font-size: 18pt;
+    text-align: center;
 }
 
 /* ABOUT SELECTED ELEMENTS AND THE LIKE */
@@ -252,6 +264,10 @@ p {
   }
 
 @keyframes push_button {
+    from {
+        background-color: #A7411D;
+        transform: scale(1);
+    }
     to {
         background-color: #803418;
         transform: scale(.95);
