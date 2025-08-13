@@ -4,10 +4,8 @@
 
 <main>
   <div class="container libre-baskerville-regular">
-    <h1 class="title title_landing">
-      Cuaderno de Bitácora
-    </h1>
-    <p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
+    <h1 class="title title_landing">Cuaderno de Bitácora</h1>
+    <!-- <p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p> -->
     <!--<ul class="blog_container">
       If you are using pagination, section.pages will be empty.
            You need to use the paginator object
@@ -19,13 +17,104 @@
       </li>
       {% endfor %}
     </ul>-->
-    <p class="sub_header">
-      Un cuaderno de bitácora, según Wikipedia, es un libro que nos relata la vida o la experiencia de alguna persona en especial y también sirve en el desarrollo de un viaje para escribir en ella.
-    </p>
+    <p class="sub_header">Un cuaderno de bitácora, según Wikipedia, es un libro que nos relata la vida o la experiencia de alguna persona en especial y también sirve en el desarrollo de un viaje para escribir en ella.</p>
+	
+    <script type="importmap">
+		{
+		"imports": {
+			"three": "https://cdn.jsdelivr.net/npm/three@v0.179.1/build/three.module.js",
+			"three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.179.1/examples/jsm/"
+		}
+		}
+	</script>
+
+	<canvas class="temporal" id="c"></canvas>
+
+		<script type="module">
+
+			import * as THREE from 'three';
+
+			function main() {
+			  const canvas = document.querySelector('#c');
+ 			  const renderer = new THREE.WebGLRenderer({antialias: true, canvas});
+
+			  const fov = 75;
+    		  const aspect = 2;  // the canvas default
+    		  const near = 0.1;
+    		  const far = 5;
+    		  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+			  camera.position.z = 2;
+
+			  const scene = new THREE.Scene();
+
+			  const boxWidth = 1;
+    		  const boxHeight = 1;
+    		  const boxDepth = 1;
+    		  const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+			  const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
+
+			  const cube = new THREE.Mesh(geometry, material);
+			  scene.add(cube);
+
+			  renderer.render(scene, camera);
+
+				function resizeRendererToDisplaySize(renderer) {
+				const canvas = renderer.domElement;
+				const width = canvas.clientWidth;
+				const height = canvas.clientHeight;
+				const needResize = canvas.width !== width || canvas.height !== height;
+				if (needResize) {
+					renderer.setSize(width, height, false);
+				}
+				return needResize;
+				}
+
+			  function render(time) {
+				time *= 0.001;  // convert time to seconds
+
+				if (resizeRendererToDisplaySize(renderer)) {
+    			  const canvas = renderer.domElement;
+    			  camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    			  camera.updateProjectionMatrix();
+  				}
+
+				const canvas = renderer.domElement;
+  				camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  				camera.updateProjectionMatrix();
+					
+				cube.rotation.x = time;
+				cube.rotation.y = time;
+					
+				renderer.render(scene, camera);
+					
+				requestAnimationFrame(render);
+			  }
+			  requestAnimationFrame(render);
+
+			  const color = 0xFFFFFF;
+    		  const intensity = 3;
+    		  const light = new THREE.DirectionalLight(color, intensity);
+    		  light.position.set(-1, 2, 4);
+    		  scene.add(light);
+			  
+			}
+			
+			main();
+
+		</script>
+
+    <h1 class="landing_list_title">
+      Lista de Entradas
+    </h1>
 
     <ul class="blog_container">
       <!-- If you are using pagination, section.pages will be empty.
            You need to use the paginator object -->  
+
+      {% set section = get_section(path="blog/_index.md") %}  <!--, metadata_only=true. Sacado de https://github.com/getzola/zola/issues/2568 -->
+      
       {% for page in section.pages %}
       <li class="blog_item">
         <p class="date">{{ page.date }}</p>
@@ -36,6 +125,18 @@
     </ul>
   </div>
 </main>
+
+<footer>
+  <div class="footer_container">
+    <p>
+      Copyright Pablo Nicolás 2025
+    </p>
+    <p>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+    </p>
+  </div>
+</footer>
+
 
 <!--
 <footer>
