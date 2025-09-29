@@ -1,5 +1,5 @@
 +++
-title = "archivo"
+title = "En preparación"
 sort_by = "date"
 template = "blog.html"
 page_template = "blog-page.html"

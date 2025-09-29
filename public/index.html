@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=routine" />-->
-  <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}"> <!-- Importante porque depende de la dirección donde se sirve -->
+  <link rel="stylesheet" href="http://localhost/style.css"> <!-- Importante porque depende de la dirección donde se sirve -->
   <script>
     MathJax = {
       tex: {
@@ -122,7 +122,197 @@
   
     setThemeFromLocalStorageOrMediaPreference()
   </script>
-  {% block content %} {% endblock content %}
+  
+
+<main style="display: flex; justify-content: center; align-items: center;">
+  <div class="landing_container">
+    <h1 class="header_landing">Cuaderno de Bitácora</h1>
+	<a href="http://localhost/blog" class="link_landing">Ir al archivo</a>
+    <!-- <p><a href="http://localhost/blog/">Posts</a>.</p> -->
+    <!--<ul class="blog_container">
+      If you are using pagination, section.pages will be empty.
+           You need to use the paginator object
+      
+    </ul>-->
+
+	<!--
+    <p class="sub_header">Un cuaderno de bitácora, según Wikipedia, es un libro que nos relata la vida o la experiencia de alguna persona en especial y también sirve en el desarrollo de un viaje para escribir en ella.</p>
+	-->
+    <script type="importmap">
+		{
+		"imports": {
+			"three": "https://cdn.jsdelivr.net/npm/three@v0.179.1/build/three.module.js",
+			"three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.179.1/examples/jsm/"
+		}
+		}
+	</script>
+	
+		<script type="module">
+
+			import * as THREE from 'three';
+
+			let mouseX = 0, mouseY = 0;
+			let followX = 0, followY = 0;
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			function onDocumentMouseMove( event ) {
+				mouseX = ( event.clientX - windowHalfX ) / 500;
+				mouseY = ( event.clientY - windowHalfY ) / 500;
+			}
+
+			document.addEventListener( 'mousemove', onDocumentMouseMove );
+
+			function main() {
+			  const canvas = document.querySelector('#c');
+ 			  const renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true});
+
+			  const fov = 75;
+    		  const aspect = 2;  // the canvas default
+    		  const near = 0.1;
+    		  const far = 5;
+    		  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+			  camera.position.z = 2;
+
+			  const scene = new THREE.Scene();
+			  //scene.background = new THREE.Color( 0xffffff );
+			  scene.background = null;
+
+			  const boxHeight = 1;
+    		  const boxWidth = 13.1/20.9;
+    		  const boxDepth = 0.8/20.9;
+    		  const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+			  //const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
+
+			  const texture = new THREE.TextureLoader().load( "http://localhost/images.jpg" );
+
+			  const material = new THREE.MeshStandardMaterial({
+				map: texture,
+				roughness: 0.6,
+			  })
+
+			  const cube = new THREE.Mesh(geometry, material);
+			  scene.add(cube);
+			  cube.scale.set(1.7,1.7,1.7);
+
+			  // cube.lookAt( 0, 0, 2 )
+
+			  renderer.render(scene, camera);
+
+			  
+
+			  function resizeRendererToDisplaySize(renderer) {
+				const canvas = renderer.domElement;
+				const width = canvas.clientWidth;
+				const height = canvas.clientHeight;
+				const needResize = canvas.width !== width || canvas.height !== height;
+				if (needResize) {
+					renderer.setSize(width, height, false);
+				}
+				return needResize;
+			  }
+
+			  function render(time) {
+				time *= 0.001;  // convert time to seconds
+
+				if (resizeRendererToDisplaySize(renderer)) {
+    			  const canvas = renderer.domElement;
+    			  camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    			  camera.updateProjectionMatrix();
+				  
+				  // NUEVO PARA TESTEAR
+				  windowHalfX = window.innerWidth / 2;
+				  windowHalfY = window.innerHeight / 2;
+  				}
+
+				const canvas = renderer.domElement;
+  				camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  				camera.updateProjectionMatrix();
+
+				followX += (mouseX - followX)*0.05;
+				followY += (mouseY - followY)*0.05;
+
+				cube.lookAt( followX, - followY, 2 )
+					
+				//cube.rotation.x = time;
+				//cube.rotation.y = time;
+					
+				renderer.render(scene, camera);
+					
+				requestAnimationFrame(render);
+			  }
+
+			  requestAnimationFrame(render);
+
+			  const color = 0xFFFFFF;
+    		  const intensity = 3;
+    		  const light = new THREE.DirectionalLight(color, intensity);
+    		  light.position.set(-1, 2, 4);
+    		  scene.add(light);
+
+			  const ambientLight = new THREE.AmbientLight( 0x404040, 4 ); // soft white light
+			  scene.add( ambientLight );
+			  
+			}
+			
+			main();
+
+		</script>
+<!--
+    <h1 class="landing_list_title">
+      Lista de Entradas
+    </h1>
+-->
+    
+  </div>
+
+  <canvas class="temporal" id="c"></canvas>
+</main>
+
+<!--<footer>
+  <div class="footer_container">
+    <div>
+      Copyright Pablo Nicolás 2025
+	</div>
+    <div>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+	</div>
+  </div>
+</footer>-->
+
+
+<!--
+<footer>
+  <div class="footer_container">
+    <p>
+      Copyright Pablo Nicolás 2025
+    </p>
+    <p>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+    </p>
+  </div>
+</footer>
+-->
+
+<!--
+<ul class="blog_container">
+
+	 --> <!--, metadata_only=true. Sacado de https://github.com/getzola/zola/issues/2568 -->
+	<!--
+	
+	<li class="blog_item">
+	  <p class="date">2025-07-31</p>
+	  <a href="http://localhost/blog/problemas-filosofia/" class="title">Mi problemática con la filosofía a través de las cartas entre Leibniz y Newton</a>
+	  <p class="reading_time"> 6 min</p>
+	</li>
+	
+</ul>
+-->
+
+
 </body>
 
 <script>

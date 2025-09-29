@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mi problemática con la filosofía a través de las cartas entre Leibniz y Newton | Cuaderno de Bitácora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=routine" />-->
+  <link rel="stylesheet" href="http://localhost/style.css"> <!-- Importante porque depende de la dirección donde se sirve -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]}
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      output: {
+        font: 'mathjax-stix2'
+      }
+    };
+    </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<script>
+  const LOCAL_STORAGE_KEY_THEME = 'theme';
+
+  const THEME_VALUE_AUTO  = 'auto';
+  const THEME_VALUE_DARK  = 'dark';
+  const THEME_VALUE_LIGHT = 'light';
+
+  const THEME_CLASS_DARK            = 'dark';           // activates dark mode styling
+  const THEME_CLASS_DARK_OVERRIDE   = 'dark_override';  // slides toggle to dark mode
+  const THEME_CLASS_LIGHT           = 'light';          // here for consistency, but has no real effect
+  const THEME_CLASS_LIGHT_OVERRIDE  = 'light_override'; // slides toggle to light mode
+
+  const THEME_CLASS_ALL = Object.freeze([
+      THEME_CLASS_DARK,
+      THEME_CLASS_DARK_OVERRIDE,
+      THEME_CLASS_LIGHT,
+      THEME_CLASS_LIGHT_OVERRIDE,
+  ])
+
+  function setDocumentClasses(...classes) {
+      THEME_CLASS_ALL.forEach((themeClass) => {
+          if (classes.includes(themeClass)) {
+              document.documentElement.classList.add(themeClass)
+          } else {
+              document.documentElement.classList.remove(themeClass)
+          }
+      })
+  }
+
+  function setThemeFromLocalStorageOrMediaPreference() {
+    console.log("hola")
+
+    const theme = localStorage.getItem(LOCAL_STORAGE_KEY_THEME) || THEME_VALUE_AUTO
+
+    switch (theme) {
+        case THEME_VALUE_AUTO:
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDocumentClasses(THEME_CLASS_DARK)
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                setDocumentClasses(THEME_CLASS_LIGHT)
+            }
+            break
+
+        case THEME_VALUE_DARK:
+            setDocumentClasses(THEME_CLASS_DARK, THEME_CLASS_DARK_OVERRIDE)
+            break
+
+        case THEME_VALUE_LIGHT:
+            setDocumentClasses(THEME_CLASS_LIGHT, THEME_CLASS_LIGHT_OVERRIDE)
+            break
+    }
+
+    console.log(`theme is: ${theme}`)
+  }
+
+  function incrementTheme() {
+    const theme = localStorage.getItem(LOCAL_STORAGE_KEY_THEME) || THEME_VALUE_AUTO
+
+    switch (theme) {
+        case THEME_VALUE_AUTO:
+            localStorage.setItem(LOCAL_STORAGE_KEY_THEME, THEME_VALUE_DARK)
+            break
+
+        case THEME_VALUE_DARK:
+            localStorage.setItem(LOCAL_STORAGE_KEY_THEME, THEME_VALUE_LIGHT)
+            break
+
+        case THEME_VALUE_LIGHT:
+            localStorage.removeItem(LOCAL_STORAGE_KEY_THEME)
+            break
+    }
+
+    setThemeFromLocalStorageOrMediaPreference()
+    changeButtonText()
+  }
+
+  // Listen for local storage changes on our theme key. This lets
+  // one tab to be notified if the theme is changed in another,
+  // and update itself accordingly.
+  window.addEventListener("storage", (e) => {
+      if (e.key == LOCAL_STORAGE_KEY_THEME) {
+          setThemeFromLocalStorageOrMediaPreference()
+      }
+  })
+
+  // Watch for OS-level changes in preference for light/dark mode.
+  // This will trigger for example if a user explicitly changes
+  // their OS-level light/dark configuration, or on sunrise/sunset
+  // if they have it set to automatic.
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      setThemeFromLocalStorageOrMediaPreference()
+  })
+
+  setThemeFromLocalStorageOrMediaPreference()
+</script>
+
+<div class="floating_container"><div>Tema:<a id="themeButton" class="nav_link" onclick="incrementTheme()"></a></div> <a class="nav_link" href="http://localhost/./..">Archivo</a></div>
+
+<main>
+  <div class="container">
+    <h1 class="title_blog">Mi problemática con la filosofía a través de las cartas entre Leibniz y Newton</h1>
+    <p class="subtitle_blog">Escrito el 31 de July de 2025. Tiempo de lectura: 6 min.</p>
+    <p>Hace ya algo más de un mes, mi compañera de piso organizó una cena antes de las vacaciones de verano con su profesor del instituto. En mi ignorancia, lo que parecía ser una velada tranquila y agradable pronto se convertiría en una encerrona para discutir sobre mi crisis con la filosofía como rama. Para los curiosos, la cena consistió en una tabla de quesos y aceitunas como entrantes, seguidos de un lomo de salmón sobre una cama de calabacín y cebolla. De postre, tuvimos .... Debo reconocer que la comida estuvo espectacular gracias a que mi compañera se tomó la molestia de comprar todos los productos en el mercado. Le agradezco enormemente el detalle, así como el libro que me regaló su profesor. Además, de la velada salieron algunas fotos y recuerdos muy bonitos que adjunto a continuación.</p>
+<p>Creo que, independientemente del resultado de la larga charla de cinco horas, me gustaría plasmar el desarrollo y las conclusiones en un . Y, dado que llevo un tiempo planteándome la posibilidad de comenzar a escribir sobre cuestiones que me interesen en un blog, qué mejor ocasión para empezar a hacerlo. Debo advertir al lector de que el transcurso de la conversación, como suele suceder, no fue lineal y los temas que discutiré se desarrollaron en paralelo. He intentado preservar la estructura cronológica de los sucesos, aunque no he reparado en resumir algunos fragmentos que no considero tan relevantes.</p>
+<h2 id="mis-problemas-con-la-filosofia">Mis problemas con la filosofía</h2>
+<p>Para las personas que me hayan conocido un tiempo, esta introducción será algo confusa. ¿Cómo es que tengo un problema con la filosofía? Yo, que siempre he mostrado interés por la filosofía como rama y he dedicado tiempo a leer textos clásicos. Y la realidad es que, desde hace unos tres años, he venido acarreando cierto desinterés en la filosofía. Aunque fue entonces cuando identifiqué esta crisis, creo que el proceso de desencanto comenzó bastante anteriormente.</p>
+<p>Intentaré exponer mi tesis de la forma más resumida posible, e ir ilustrándola conforme se desarrolle el texto. Mi crisis fundamental con la filosofía es, esencialmente, que el objetivo de muchos textos no es</p>
+<p>Creo que será enriquecedor dar contexto de ciertas experiencias que han ido forjando esta crisis con la filosofía. Una gran parte</p>
+<p>Ahora bien: esto no priva a otras personas de disfrutar de la filosofía por motivos muy diferentes. Debatiendo esta cuestión con un amigo, me comentó que su motivación para hacer filosofía era poder explorar las consecuencias de sistemas de axiomas o pensamiento arbitrarios. Yo, por mi parte, no encuentro ningún tipo de interés en tales juegos. Supongo que siempre he sido más físico que matemático, pero para mí es mucho más interesante entender el <em>qué</em> subyace a los fenómenos que encontramos que el <em>cómo</em>.</p>
+<h2 id="sobre-la-verdad">Sobre la verdad</h2>
+<p>Gran parte de la problemática expuesta en el párrafo anterior atañe a la noción de verdad. Por este preciso motivo, la primera parte de la discusión se centró en debatir qué podemos entender como verdad.</p>
+<h3 id="la-verdad-como-nocion-relacional">La verdad como noción relacional</h3>
+<p>En primer lugar, me gustaría aclarar qué entendemos cuando nos referimos al concepto de <em>verdad</em>. Aquí entra uno de los primeros puntos de conflicto de la conversación. Hablar sobre la verdad matemática y la verdad práctica. Hablar sobre consistencia en modelos y Heiddeger.</p>
+<p>El profesor expuso este punto de vista mediante un ejemplo. Supongamos que un hombre que vive solo sale de fiesta y, al despertarse el día siguiente, recuerda haber visto unas bragas colgadas en la puerta al ir a beber agua por la noche. Aunque no se puede saber a ciencia cierta si el recuerdo es fruto de un sueño o no, podemos suponer con cierta seguridad que así debe serlo. El hombre volvió solo a su piso y, dado que no vive con más personas, no dispone de bragas en su armario. El hecho de que el recuerdo que el hombre tiene no encaje con el conjunto de todas las experiencias previas que asumimos como verdad implica que es complicado considerar que así lo sea.</p>
+<p>Una consecuencia del anterior criterio es que nos vemos forzados a aceptar el <em>principio de inducción</em>. En otras palabras, ... No estoy en absoluto en contra de esta asunción: de hecho, me parece necesaria para sentar la base de cualquier conocimiento basado en la experiencia. Pero el lector debe tener en cuenta esta asunción, dado que algunos de los razonamientos que expondré posteriormente se basan en este supuesto.</p>
+<p>Como último comentario, me gustaría remarcar que este debate fue algo más extenso de lo que estoy indicando aquí y, en aras de hacer la exposición más liviana, he dedicido omitir el resto de detalles.</p>
+<h3 id="sobre-lo-que-la-verdad-deberia-ser">Sobre lo que la verdad debería ser</h3>
+<p>Si bien hemos llegado a un consenso sobre lo que considerar como verdad, hay dos posibles lecturas de este concepto que se encuentran en confrontación. La primera de ellas es defendida por mi compañera de piso y su profesor, mientras que la segunda se corresponde con mi postura.</p>
+<p>La primera lectura sobre la verdad sostiene que, como dicha noción se sustenta en base al conjunto de experiencias previas que entendemos como verdad, dicha propiedad es mutable en el tiempo. En otras palabras: ciertas afirmaciones que puedan ser verdad en un contexto social y político podrían ser falsas en otro posterior. Tal y como está presentada,</p>
+<p>Mi lectura sobre la noción de verdad es algo diferente. Un requisito necesario e inmutable que se le debe poder exigir a la verdad es que sea inmutable en el tiempo. Esta aproximación tiene un carácter más científico y, apropiadamente, se sustenta en la validez del principio de inducción. El argumento es el siguiente. ...</p>
+<p>Yo considero que la verdad tiene que ser un concepto atemporal, no dependiente del contexto. Ellos lo ven de forma diferente, siendo dependiente del sistema de creencias del momento.</p>
+<h2 id="leibniz-newton-y-el-vacio">Leibniz, Newton y el vacío</h2>
+<p>En cierto sentido, la filosofía no puede argumentar sobre la esencia de las cosas pero puede argumentar sobre la forma en la que las describimos.</p>
+<p>Una vez sentadas las bases sobre lo que entendemos como verdad, podemos tratar uno de los grandes puntos del debate. En un cierto punto al respecto de la discusión anterior, el profesor de mi compañera comentó el siguiente ejemplo para mencionar ...</p>
+
+  </div>
+</main>
+
+<script>
+
+  const button = document.getElementById("themeButton");
+
+  button.innerText = "Ejemplo"
+
+  function changeButtonText() {
+    const theme = localStorage.getItem(LOCAL_STORAGE_KEY_THEME) || THEME_VALUE_AUTO
+
+    const button = document.getElementById("themeButton");
+    
+    switch (theme) {
+      case THEME_VALUE_AUTO:
+        button.innerText = "Sistema"
+        break
+
+      case THEME_VALUE_DARK:
+        button.innerText = "Oscuro"
+        break
+
+      case THEME_VALUE_LIGHT:
+        button.innerText = "Claro"
+        break
+    }
+
+
+  }
+
+  window.addEventListener("storage", (event) => {
+        if (event.key == LOCAL_STORAGE_KEY_THEME) {
+          changeButtonText()
+        }
+    })
+
+    changeButtonText()
+</script>
+
+<!--<footer>
+  <div class="footer_container">
+    <div>
+      Copyright Pablo Nicolás 2025
+    </div>
+    <div>
+      Built using <a href="https://www.getzola.org/documentation/content/sass/">Zola</a>.
+    </div>
+  </div>
+</footer>-->
+
+</body>
+
+</html>

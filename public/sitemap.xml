@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://localhost/</loc>
+    </url>
+    <url>
+        <loc>http://localhost/blog/</loc>
+    </url>
+    <url>
+        <loc>http://localhost/blog/problemas-filosofia/</loc>
+        <lastmod>2025-08-01</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost/drafts/</loc>
+    </url>
+    <url>
+        <loc>http://localhost/notas/</loc>
+    </url>
+    <url>
+        <loc>http://localhost/notas/grothendieck-topologies-descent/</loc>
+        <lastmod>2025-09-14</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost/personal/</loc>
+    </url>
+    <url>
+        <loc>http://localhost/personal/sobre-la-necesidad-del-diario/</loc>
+        <lastmod>2025-09-14</lastmod>
+    </url>
+</urlset>

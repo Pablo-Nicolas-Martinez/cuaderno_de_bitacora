@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} | Cuaderno de Bitácora</title>
+  <title>La necesidad de un diario | Cuaderno de Bitácora</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=routine" />-->
-  <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}"> <!-- Importante porque depende de la dirección donde se sirve -->
+  <link rel="stylesheet" href="http://localhost/style.css"> <!-- Importante porque depende de la dirección donde se sirve -->
   <script>
     MathJax = {
       tex: {
@@ -124,14 +124,17 @@
   setThemeFromLocalStorageOrMediaPreference()
 </script>
 
-<div class="floating_container"><div>Tema:<a id="themeButton" class="nav_link" onclick="incrementTheme()"></a></div> <a class="nav_link" href="{{ get_url(path="./blog") | safe }}">Archivo</a></div>
+<div class="floating_container"><div>Tema:<a id="themeButton" class="nav_link" onclick="incrementTheme()"></a></div> <a class="nav_link" href="http://localhost/./..">Archivo</a></div>
 
 <main>
   <div class="container">
-    <h1 class="title_blog">{{ page.title }}</h1>
-    <p class="subtitle_blog">Escrito el {{ page.date | date(format="%d/%m/%Y") }}.</p>
-    <!--<p class="subtitle_blog">Escrito el {{ page.date | date(format="%d de %B de %Y")}}. Tiempo de lectura: {{ page.reading_time }} min.</p>-->
-    {{ page.content | safe }}
+    <h1 class="title_blog">La necesidad de un diario</h1>
+    <p class="subtitle_blog">Escrito el 14 de September de 2025. Tiempo de lectura: 2 min.</p>
+    <p>Desde hace ya un tiempo llevo contemplando la posibilidad de comenzar un diario. En primer lugar, porque me he dado cuenta de que estoy olvidando algunas de las cosas que me han ocurrido estos últimos años. Tener un lugar donde reflejar, aunque sea brevemente, lo que siento o pienso me ayudará a fijar mejor la sensación del paso del tiempo. En segundo lugar, creo que tener la posibilidad de escribir sobre mis pensamientos me ayudará a conectar más conmigo mismo y me forzará a realizar ejercicios de introspección, lo que, por otra parte, hace tiempo que no hago.</p>
+<p>No tengo intención de que las entradas sean especialmente largas. De hecho, probablemente me ayude a escribir el hecho de poder tener entradas más cortas y no verme forzado a dedicar rangos de tiempo de los que no dispongo en escribir entradas. Tampoco me gustaría forzar un límite de caracteres en las entradas, dado que habrá ocasiones en las que quiera disertar con el debido espacio. Creo que lo más justo con esta idea es dejar que fluya y se ajuste a las necesidades del momento, sin fijarle la forma ni el contenido.</p>
+<p>De la misma forma, dudo que escriba diariamente por mucho que contradiga el nombre de «diario». Es posible que un término más adecuado sea el de «cuaderno de bitácora». A lo largo de la mayoría de días no ocurre nada digno de ser escrito en mi vida. Veo inútil y poco fiel a mi idea tener que escribir sin saber muy bien qué decir, así que me limitaré a reflejar las situaciones o pensamientos que considere necesario plasmar.</p>
+<p>Espero que esta, a diferencia de otras, no sea una iniciativa que deje en el cajón tras jugar un poco con ella. Últimamente estoy más contento con mi progreso respecto al ocio y a las iniciativas que he ido pensando estos últimos años. Siento que muchas de ellas están comenzando a cristalizar ahora, y que estoy pudiendo llevarlas a cabo a pesar de los estándares de calidad que suelo imponerme. Espero que esta idea florezca al igual que el resto.</p>
+
   </div>
 </main>
 

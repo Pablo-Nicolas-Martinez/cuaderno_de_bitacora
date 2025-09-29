@@ -5,48 +5,49 @@ updated = 2025-08-01
 draft = false
 +++
 
-Aquí, seguramente, tendré que poner la información relevante de la noticia o del post. Ya se hará. Hay bastante tiempo en esta vida.
+Hace ya algo más de un mes, mi compañera de piso organizó una cena antes de las vacaciones de verano con su profesor del instituto. En mi ignorancia, lo que parecía ser una velada tranquila y agradable pronto se convertiría en una encerrona para discutir sobre mi crisis con la filosofía como rama. Para los curiosos, la cena consistió en una tabla de quesos y aceitunas como entrantes, seguidos de un lomo de salmón sobre una cama de calabacín y cebolla. De postre, tuvimos .... Debo reconocer que la comida estuvo espectacular gracias a que mi compañera se tomó la molestia de comprar todos los productos en el mercado. Le agradezco enormemente el detalle, así como el libro que me regaló su profesor. Además, de la velada salieron algunas fotos y recuerdos muy bonitos que adjunto a continuación.
 
-## Esto es para comprobar la jerarquía en Markdown
+Creo que, independientemente del resultado de la larga charla de cinco horas, me gustaría plasmar el desarrollo y las conclusiones en un . Y, dado que llevo un tiempo planteándome la posibilidad de comenzar a escribir sobre cuestiones que me interesen en un blog, qué mejor ocasión para empezar a hacerlo. Debo advertir al lector de que el transcurso de la conversación, como suele suceder, no fue lineal y los temas que discutiré se desarrollaron en paralelo. He intentado preservar la estructura cronológica de los sucesos, aunque no he reparado en resumir algunos fragmentos que no considero tan relevantes.
 
-A ver cómo queda esto. Además, podemos poner un poco de `código` en la mezcla a ver cómo queda. Además, tenemos letra _itálica_ y también **negrita**.
+## Mis problemas con la filosofía
 
-```cpp
-#include <iostream>
-using namespace std;
+Para las personas que me hayan conocido un tiempo, esta introducción será algo confusa. ¿Cómo es que tengo un problema con la filosofía? Yo, que siempre he mostrado interés por la filosofía como rama y he dedicado tiempo a leer textos clásicos. Y la realidad es que, desde hace unos tres años, he venido acarreando cierto desinterés en la filosofía. Aunque fue entonces cuando identifiqué esta crisis, creo que el proceso de desencanto comenzó bastante anteriormente.
 
-int main() {
-    cout << "Hello world" << endline;
-}
-```
+Intentaré exponer mi tesis de la forma más resumida posible, e ir ilustrándola conforme se desarrolle el texto. Mi crisis fundamental con la filosofía es, esencialmente, que el objetivo de muchos textos no es 
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+Creo que será enriquecedor dar contexto de ciertas experiencias que han ido forjando esta crisis con la filosofía. Una gran parte
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+Ahora bien: esto no priva a otras personas de disfrutar de la filosofía por motivos muy diferentes. Debatiendo esta cuestión con un amigo, me comentó que su motivación para hacer filosofía era poder explorar las consecuencias de sistemas de axiomas o pensamiento arbitrarios. Yo, por mi parte, no encuentro ningún tipo de interés en tales juegos. Supongo que siempre he sido más físico que matemático, pero para mí es mucho más interesante entender el _qué_ subyace a los fenómenos que encontramos que el _cómo_.
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+## Sobre la verdad
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+Gran parte de la problemática expuesta en el párrafo anterior atañe a la noción de verdad. Por este preciso motivo, la primera parte de la discusión se centró en debatir qué podemos entender como verdad.
 
-## Otra sección de ejemplo, no vaya a ser{#test}
+### La verdad como noción relacional 
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+En primer lugar, me gustaría aclarar qué entendemos cuando nos referimos al concepto de _verdad_. Aquí entra uno de los primeros puntos de conflicto de la conversación. Hablar sobre la verdad matemática y la verdad práctica. Hablar sobre consistencia en modelos y Heiddeger.
 
-Pues igual, tontopollas. Si has definido el título del texto como un `h1`. ¿Qué esperabas?
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+El profesor expuso este punto de vista mediante un ejemplo. Supongamos que un hombre que vive solo sale de fiesta y, al despertarse el día siguiente, recuerda haber visto unas bragas colgadas en la puerta al ir a beber agua por la noche. Aunque no se puede saber a ciencia cierta si el recuerdo es fruto de un sueño o no, podemos suponer con cierta seguridad que así debe serlo. El hombre volvió solo a su piso y, dado que no vive con más personas, no dispone de bragas en su armario. El hecho de que el recuerdo que el hombre tiene no encaje con el conjunto de todas las experiencias previas que asumimos como verdad implica que es complicado considerar que así lo sea.
 
-Oye. Con respeto.
+Una consecuencia del anterior criterio es que nos vemos forzados a aceptar el _principio de inducción_. En otras palabras, ... No estoy en absoluto en contra de esta asunción: de hecho, me parece necesaria para sentar la base de cualquier conocimiento basado en la experiencia. Pero el lector debe tener en cuenta esta asunción, dado que algunos de los razonamientos que expondré posteriormente se basan en este supuesto.
 
-Voy a hacer una prueba. A ver si las comillas latinas se compilan como deberían: <<test>>. Vaya, pues no. Estas sí que deberían funcionar «test».
+Como último comentario, me gustaría remarcar que este debate fue algo más extenso de lo que estoy indicando aquí y, en aras de hacer la exposición más liviana, he dedicido omitir el resto de detalles.
 
-This is an example lemma
-{: .lemma}
+### Sobre lo que la verdad debería ser
 
-## Un título de sección lo suficientemente largo como para que salte de línea
+Si bien hemos llegado a un consenso sobre lo que considerar como verdad, hay dos posibles lecturas de este concepto que se encuentran en confrontación. La primera de ellas es defendida por mi compañera de piso y su profesor, mientras que la segunda se corresponde con mi postura.
 
-También podemos probar con enlaces: aquí tenemos un [Rick Roll](https://minecraft.fandom.com/wiki/Custom_structure){:target="_blank"}.
+La primera lectura sobre la verdad sostiene que, como dicha noción se sustenta en base al conjunto de experiencias previas que entendemos como verdad, dicha propiedad es mutable en el tiempo. En otras palabras: ciertas afirmaciones que puedan ser verdad en un contexto social y político podrían ser falsas en otro posterior. Tal y como está presentada, 
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+Mi lectura sobre la noción de verdad es algo diferente. Un requisito necesario e inmutable que se le debe poder exigir a la verdad es que sea inmutable en el tiempo. Esta aproximación tiene un carácter más científico y, apropiadamente, se sustenta en la validez del principio de inducción. El argumento es el siguiente. ...
 
-{{ main_button(label="Test") }}
+
+
+Yo considero que la verdad tiene que ser un concepto atemporal, no dependiente del contexto. Ellos lo ven de forma diferente, siendo dependiente del sistema de creencias del momento.
+
+## Leibniz, Newton y el vacío
+
+En cierto sentido, la filosofía no puede argumentar sobre la esencia de las cosas pero puede argumentar sobre la forma en la que las describimos.
+
+Una vez sentadas las bases sobre lo que entendemos como verdad, podemos tratar uno de los grandes puntos del debate. En un cierto punto al respecto de la discusión anterior, el profesor de mi compañera comentó el siguiente ejemplo para mencionar ... 

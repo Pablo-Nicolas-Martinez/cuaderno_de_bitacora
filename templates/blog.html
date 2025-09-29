@@ -3,24 +3,28 @@
 {% block content %}
 
 <main>
-  <div class="container libre-baskerville-regular">
-    <h1 class="title">
-      {{ section.title }}
-    </h1>
+  <div class="container">
+    <h1 class="header_archive">{{ section.title }}</h1>
     <ul class="blog_container">
       <!-- If you are using pagination, section.pages will be empty.
            You need to use the paginator object -->  
-      {% for page in section.pages %}
+      <!--{% for page in section.pages %}
       <li class="blog_item">
         <p class="date">{{ page.date }}</p>
         <a href="{{ page.permalink | safe }}" class="title">{{ page.title }}</a>
         <p class="reading_time"> {{ page.reading_time }} min</p>
       </li>
+      {% endfor %}-->
+      {% for page in section.pages %}
+        <!--<p class="subtext_archive">Escrito el {{ page.date | date(format="%d de %B de %Y") }}. Lectura en {{ page.reading_time }} min.</p>-->
+        <p class="subtext_archive">Escrito el {{ page.date | date(format="%d/%m/%Y") }}.</p>
+        <a href="{{ page.permalink | safe }}" class="link_archive">{{ page.title }}</a>
       {% endfor %}
     </ul>
   </div>
 </main>
 
+ <!--
 <footer>
   <div class="footer_container">
     <p>
@@ -31,6 +35,7 @@
     </p>
   </div>
 </footer>
+-->
 
 {% endblock content %}
 
