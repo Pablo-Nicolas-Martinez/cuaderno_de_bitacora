@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://pablo_nicolas_martinez.github.io/cuaderno_de_bitacora"
+base_url = "https://cuaderno-de-bitacora.pages.dev"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
